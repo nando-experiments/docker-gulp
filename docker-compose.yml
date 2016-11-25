@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  gulp:
+    container_name: gulp
+    image: gulp
+    build:
+      context: ./
+    # command: /bin/bash -c #'yarn start'
+    command: /sbin/init -c
+    volumes:
+      - ./src:/app
